@@ -10,7 +10,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 function App() {
   return (
     <>
-      <BrowserRouter basename={"/portfolio_site-main/"}>
+      <BrowserRouter basename={"/"}>
         <ThemeContextProvider>
           <LanguageContextProvider>
             <ActiveSectionContextProvider>
