@@ -17,7 +17,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 
 const ProjectSlider: React.FC = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const { ref } = useSectionInView("Projects");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
@@ -143,7 +143,7 @@ const ProjectSlider: React.FC = () => {
                     <div className="buttons flex gap-10">
                       <Button
                         label="Live Demo"
-                        link={project.deploymenturl}
+                        // link={project.deploymenturl}
                         iconSVG={project.deploymenticon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
@@ -184,7 +184,7 @@ const ProjectSlider: React.FC = () => {
                 <div className="buttons flex gap-10 max-lg:flex-col">
                   <Button
                     label="Live Demo"
-                    link={project.deploymenturl}
+                    // link={project.deploymenturl}
                     iconSVG={project.deploymenticon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}

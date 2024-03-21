@@ -76,7 +76,7 @@ const NavBar: React.FC<NavBarProps> = ({ projectPage }) => {
 
     return (
       <NavLink
-        to={link}
+        to={link as string}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={`relative ${linkClasses}`}

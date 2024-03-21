@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { projectsData } from "../assets/lib/data";
 import { useLanguage } from "../context/language-context";
 import { useTheme } from "../context/theme-context";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
