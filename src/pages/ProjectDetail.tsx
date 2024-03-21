@@ -4,10 +4,12 @@ import ThemeSwitch from "../components/theme-switch";
 import Layout from "../layout/layout";
 import Footer from "../components/Footer";
 import { ScrollProgress } from "../components/ScrollProgress";
-import RadialGradient from "../components/RadialGradient";
+// import RadialGradient from "../components/RadialGradient";
 // import { Link } from 'react-router-dom';
 const LazySiteBarRight = lazy(() => import("../components/SideBarRight"));
 const LazySiteBarLeft = lazy(() => import("../components/SiteBarLeft"));
+const LazyRadialGradient = lazy(() => import("../components/RadialGradient"));
+
 // Assuming you have a type for your project data
 interface Project {
   id: string;
@@ -60,7 +62,7 @@ const ProjectDetail: React.FC = () => {
         />
         <Suspense fallback={<div>Loading...</div>}>
           <LazySiteBarLeft />
-          <RadialGradient scale="scale-y-125" opacity="opacity-30" position="fixed" />
+          <LazyRadialGradient scale="scale-y-125" opacity="opacity-30" position="fixed" />
           <LazySiteBarRight />
         </Suspense>
       </header>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, lazy } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useSectionInView } from "../assets/lib/hooks";
 import {
@@ -7,8 +7,11 @@ import {
 import { useTheme } from "../context/theme-context";
 import { useLanguage } from "../context/language-context";
 import SkillSection from "./SkillSection";
-import RadialGradient from "./RadialGradient";
+// import RadialGradient from "./RadialGradient";
 import { motion, useScroll, useTransform } from "framer-motion";
+
+const LazyRadialGradient = lazy(() => import("../components/RadialGradient"));
+
 
 const TechStack: React.FC = () => {
   const { ref } = useSectionInView("Skills");
@@ -28,7 +31,7 @@ const TechStack: React.FC = () => {
         id="skills"
         ref={ref}
       >
-        <RadialGradient
+        <LazyRadialGradient
           scale="scale-y-[3]"
           opacity={theme === "light" ? "opacity-30" : "opacity-30"}
           position="top-[55rem]"

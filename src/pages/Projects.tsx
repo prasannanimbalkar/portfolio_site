@@ -4,7 +4,7 @@ import Layout from "../layout/layout";
 import Footer from "../components/Footer";
 import ThemeSwitch from "../components/theme-switch";
 import { ScrollProgress } from "../components/ScrollProgress";
-import RadialGradient from "../components/RadialGradient";
+// import RadialGradient from "../components/RadialGradient";
 import { Link } from 'react-router-dom';
 
 import { projectsData } from "../assets/lib/data";
@@ -14,6 +14,7 @@ import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+const LazyRadialGradient = lazy(() => import("../components/RadialGradient"));
 const LazySiteBarRight = lazy(() => import("../components/SideBarRight"));
 const LazySiteBarLeft = lazy(() => import("../components/SiteBarLeft"));
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
@@ -36,7 +37,7 @@ const Projects: React.FC = () => {
           />
           <Suspense fallback={<div>Loading...</div>}>
             <LazySiteBarLeft />
-            <RadialGradient scale="scale-y-125" opacity="opacity-30" position="fixed" />
+            <LazyRadialGradient scale="scale-y-125" opacity="opacity-30" position="fixed" />
             <LazySiteBarRight />
           </Suspense>
         </header>
