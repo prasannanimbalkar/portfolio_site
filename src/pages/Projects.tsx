@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import ThemeSwitch from "../components/theme-switch";
 import { ScrollProgress } from "../components/ScrollProgress";
 // import RadialGradient from "../components/RadialGradient";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { projectsData } from "../assets/lib/data";
 import { useLanguage } from "../context/language-context";
@@ -21,8 +21,13 @@ import { Autoplay, EffectCards, Pagination } from "swiper/modules";
 
 const Projects: React.FC = () => {
   const { language } = useLanguage();
-
+  const navigate = useNavigate();
   const { theme } = useTheme();
+
+  const handleNavigate = (projectTitle: string) => {
+    // Function to navigate programmatically
+    navigate(`/projects/${projectTitle.replace(/\s+/g, '-')}`);
+  };
 
   return (
     <>
@@ -80,9 +85,12 @@ const Projects: React.FC = () => {
                         <p className="text-gray-700 mb-4 py-2">
                           {language === "DE" ? project.description : project.description_EN}
                         </p>
-                        <Link to={`/projects/${project.title.replace(/\s+/g, '-')}`} className="inline-block text-blue-500 hover:text-orange transition duration-100">
+                        <button
+                          onClick={() => handleNavigate(project.title)}
+                          className="inline-block text-blue-500 hover:text-orange transition duration-100"
+                        >
                           Read more
-                        </Link>
+                        </button>
                       </div>
                       <div className="mt-4">
                         <p className="text-xl font-semibold mb-2">
