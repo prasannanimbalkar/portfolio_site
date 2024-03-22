@@ -97,7 +97,7 @@ export const projectsData = [
       { name: "Trello", icon: trelloicon },
     ],
     image: tastyMockup,
-    deploymenturl: "https://tasty-recipe-obe893964-prasannanimbalkar.vercel.app/",
+    deploymenturl: "https://tasty-recipe-app-one.vercel.app/",
     githuburl: "https://github.com/prasannanimbalkar/Tasty-recipe-app",
     githubicon: FiGithub,
     deploymenticon: FiLink,
