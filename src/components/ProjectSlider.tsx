@@ -151,7 +151,7 @@ const ProjectSlider: React.FC = () => {
                       />
                       <Button
                         label="Github Repository"
-                        // link={project.githuburl}
+                        link={project.githuburl}
                         iconSVG={project.githubicon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
@@ -191,7 +191,7 @@ const ProjectSlider: React.FC = () => {
                   />
                   <Button
                     label="Github Repository"
-                    // link={project.githuburl}
+                    link={project.githuburl}
                     iconSVG={project.githubicon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
