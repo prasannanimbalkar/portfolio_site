@@ -122,7 +122,7 @@ export const projectsData = [
       // { name: "Git", icon: giticon },
     ],
     image: f1app,
-    deploymenturl: "https://example.com/f1-app",
+    deploymenturl: "",
     githuburl: "https://github.com/prasannanimbalkar/F1-app-react-native",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -151,7 +151,7 @@ export const projectsData = [
       // { name: "Jira", icon: jiraicon },
     ],
     image: cornerPizza,
-    // deploymenturl: "https://cornerpizza.com",
+    deploymenturl: "",
     githuburl: "https://github.com/prasannanimbalkar/food-ordering-master",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -274,8 +274,7 @@ export const projectsData = [
     ],
     image: silentmoonMockup,
     // deploymenturl: "https://silentmoon-grpw.onrender.com/",
-    // githuburl:
-    //   "https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
+    // githuburl:"https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
