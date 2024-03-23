@@ -214,7 +214,7 @@ export const projectsData = [
       // { name: "Jira", icon: jiraicon },
     ],
     image: movieWishlistMockup,
-    deploymenturl: "movie-wishlist-718e.vercel.app",
+    deploymenturl: "https://movie-wishlist-718e.vercel.app/",
     githuburl: "https://github.com/prasannanimbalkar/movie-wishlist",
     githubicon: FiGithub,
     deploymenticon: FiLink,
