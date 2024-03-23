@@ -142,6 +142,7 @@ const ProjectSlider: React.FC = () => {
                       </div>
                     </div>
                     <div className="buttons flex gap-10">
+                      {project.type == 'mob' ? null : 
                       <Button
                         label="Live Demo"
                         link={project.deploymenturl}
@@ -150,6 +151,7 @@ const ProjectSlider: React.FC = () => {
                         iconcolor={project.colors.icon}
                         onClick={() => notifyServerRequest(project.deploymenturl)}
                       />
+                    }
                       <Button
                         label="Github Repository"
                         link={project.githuburl}

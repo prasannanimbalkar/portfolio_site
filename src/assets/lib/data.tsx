@@ -25,16 +25,16 @@ import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 import javaicon from "../../assets/icons/icons8-java-77.svg"
 
-import tastyMockup from "../../assets/img/tasty_mockup.webp";
+import tastyMockup from "../../assets/img/tasty.png";
 import f1app from "../../assets/img/F1.jpeg"
 import cornerPizza from "../../assets/img/pizza_shop.png"
 import myntraElasticSearchMockup from "../../assets/img/myntra_elasticSearch.png"
 import movieWishlistMockup from "../../assets/img/movie_wishlist.png"
 import realItyMockup from "../../assets/img/Real-ty.png"
-
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
-import profilepicture from "../img/me2.webp";
+
+import profilepicture from "../img/me4.png";
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
@@ -81,6 +81,7 @@ export const headerIntroData = {
 export const projectsData = [
   {
     title: "Tasty App",
+    type: "web",
     description:
       "Eine Rezepte App, die wir als Team mit React und der MealDB API gebaut haben. Ich war der Front-End Entwickler und habe Features wie Voice Search oder Print to PDF programmiert. Das Design wurde mit Figma erstellt. Die Website ist responsive und mobile-optimiert.",
     description_EN:
@@ -110,6 +111,7 @@ export const projectsData = [
   },
   {
     title: "F1 App",
+    type: "mob",
     description:
       "Eine App zur Verfolgung der Formel 1 Rennen, Ergebnisse und Fahrerstatistiken. Entwickelt mit React Native und verschiedenen APIs zur Datenbeschaffung. Als Front-End Entwickler implementierte ich Funktionen wie Live-Updates, Fahrerprofile und Rennhighlights. Das Design wurde mit Figma und Adobe XD umgesetzt, und die App ist für verschiedene Bildschirmgrößen optimiert.",
     description_EN:
@@ -135,6 +137,7 @@ export const projectsData = [
   },
   {
     title: "Corner Pizza",
+    type: "web",
     description:
       "Eine Food-Ordering-App für Corner Pizza, die es Kunden ermöglicht, online Bestellungen aufzugeben. Entwickelt mit Next.js für eine verbesserte SEO und schnelle Ladezeiten. Ich war verantwortlich für das Backend-Management, einschließlich Datenbankintegration und API-Routen. Das Design ist benutzerfreundlich und für Mobilgeräte optimiert, erstellt mit Tailwind CSS.",
     description_EN:
@@ -164,6 +167,7 @@ export const projectsData = [
   },
   {
     title: "Myntra ElasticSearch",
+    type: "web",
     description:
       "Ein ElasticSearch-Cluster für die Myntra-Einzelhandelsplattform, um die Sucheffizienz und Produktfilterung zu verbessern. Implementiert und containerisiert mit Docker für eine einfache Skalierung und Wartung. Ich war für die Architektur des Suchsystems, die Optimierung der Suchalgorithmen und die Integration mit der Myntra-Datenbank zuständig.",
     description_EN:
@@ -193,23 +197,24 @@ export const projectsData = [
   },
   {
     title: "Movie Wishlist",
+    type: "web",
     description:
       "Eine Anwendung zur Erstellung einer Wunschliste für Filme, die mit React entwickelt wurde und Moment.js für die Datums- und Zeitverwaltung nutzt. Als Entwickler war ich für das Design der Benutzeroberfläche, die Implementierung der Wishlist-Funktionalität und die Integration der Datumsverwaltung mit Moment.js verantwortlich. Die App ermöglicht es Benutzern, Filme hinzuzufügen, zu bearbeiten und zu löschen, mit personalisierten Erinnerungen und Terminplanungen.",
     description_EN:
       "An application for creating a movie wishlist, developed with React and utilizing Moment.js for date and time management. As a developer, I was responsible for designing the user interface, implementing the wishlist functionality, and integrating date management with Moment.js. The app allows users to add, edit, and delete movies, with personalized reminders and scheduling.",
     technologies: [
-      // { name: "React", icon: reactIcon },
+      { name: "React", icon: reacticon },
       // { name: "Moment.js", icon: momentJsIcon },
       // { name: "HTML", icon: htmlIcon },
       // { name: "CSS", icon: cssIcon },
       // { name: "JavaScript", icon: javascriptIcon },
-      // { name: "Node.js", icon: nodeJsIcon },
+      { name: "Node.js", icon: nodejsicon },
       // { name: "Webpack", icon: webpackIcon },
       // { name: "Git", icon: giticon },
       // { name: "Jira", icon: jiraicon },
     ],
     image: movieWishlistMockup,
-    deploymenturl: "https://example.com/movie-wishlist",
+    deploymenturl: "movie-wishlist-718e.vercel.app",
     githuburl: "https://github.com/prasannanimbalkar/movie-wishlist",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -222,6 +227,7 @@ export const projectsData = [
   },
   {
     title: "Real-ity",
+    type: "web",
     description:
       "Eine Real-Estate-App, die Immobilienanzeigen aggregiert und Nutzern ermöglicht, schnell und effizient ihre Traumimmobilien zu finden. Entwickelt mit Next.js und React, nutzt die App Axios für Netzwerkanfragen, Framer Motion für flüssige Animationen und Millify zur Formatierung von Zahlen. NProgress verbessert die Benutzererfahrung durch visuelles Feedback bei Ladevorgängen.",
     description_EN:
@@ -246,14 +252,15 @@ export const projectsData = [
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
-      main: "#0070f3", // Primary color for Next.js branding
-      second: "#ff5a5f", // Accent color for real estate vibes
+      main: "main-btn", // Primary color for Next.js branding
+      second: "secondary-btn", // Accent color for real estate vibes
       icon: "white",
       projectcolor: "#e5e5e5", // Light grey background color
     },
   },
 {
     title: "Silentmoon",
+    type: "web",
     description:
       "Eine Yoga und Meditations App, die wir als Team mit React, MongoDB, Express und Node.js gebaut haben. Meine Aufgabe als Gitmaster und Backend Entwickler bestand darin, das Backend mit Anbindung anhand einer Restful API zu programmieren und die Datenbank in MongoDB zu modellieren.",
     description_EN:
@@ -286,6 +293,7 @@ export const projectsData = [
   },
   {
     title: "Furniture Organizer",
+    type: "web",
     description:
       "Eine Möbel-Organizer App, die wir als Duo-Team mit React, MongoDB, Express und Node.js programmiert haben. Als Gitmaster habe ich die Verknüpfung des Frontends mit dem Backend und die Datenbankmodellierung übernommen. Die App ist responsive und mobile-optimiert.",
     description_EN:
@@ -411,14 +419,14 @@ export const skillsDataWeb = [
   },
 ] as const;
 
-export const skillsDataDesign = [
+export const skillsDataBackend = [
   {
-    skillsTitle: "Design",
+    skillsTitle: "BackEnd",
     skills: [
-      { title: "Figma", hash: "#Figma", icon: figmaicon, color: "#F24E1E" },
+      { title: "Java", hash: "#Java", icon: javaicon, color: "#F24E1E" },
       {
-        title: "Adobe XD",
-        hash: "#Adobe XD",
+        title: "Spring Boot",
+        hash: "#Spring Boot",
         icon: adobexdicon,
         color: "#FF61F6",
       },
