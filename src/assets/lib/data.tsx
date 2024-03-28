@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import adobexdicon from "../../assets/icons/adobexdicon.svg";
 import canvaicon from "../../assets/icons/canvaicon.svg";
 import figmaicon from "../../assets/icons/figmaicon.svg";
@@ -24,6 +25,16 @@ import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 import javaicon from "../../assets/icons/icons8-java-77.svg"
+import awsicon from "../../assets/icons/icons8-amazon-web-services-77.svg";
+import teraformicon from "../../assets/icons/icons8-terraform.svg";
+import jenkinsicon from "../../assets/icons/icons8-jenkins.svg";
+import angularicon from "../../assets/icons/icons8-angular.svg";
+import springBootIcon from "../../assets/icons/icons8-spring-boot.svg";
+import dockericon from "../../assets/icons/icons8-docker.svg";
+import kubernetesIcon from "../../assets/icons/icons8-kuber-77.svg";
+import redisIcon from "../../assets/icons/icons8-redis.svg";
+import pythonIcon from "../../assets/icons/icons8-python-77.svg";
+
 
 import tastyMockup from "../../assets/img/tasty.png";
 import f1app from "../../assets/img/F1.jpeg"
@@ -281,7 +292,7 @@ export const projectsData = [
     ],
     image: silentmoonMockup,
     deploymenturl: "https://silentmoon-grpw.onrender.com/",
-    githuburl:"https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
+    githuburl:"/",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -314,7 +325,7 @@ export const projectsData = [
     ],
     image: instorMockup,
     deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
-    githuburl: "https://github.com/AlpayC/Furniture_MERN",
+    githuburl: "/",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -341,12 +352,6 @@ export const skillsDataWeb = [
         title: "HTML",
         hash: "#html",
         icon: htmlicon,
-        color: "#F1662A",
-      },
-      {
-        title: "JAVA",
-        hash: "#Java",
-        icon: javaicon,
         color: "#F1662A",
       },
       {
@@ -380,12 +385,6 @@ export const skillsDataWeb = [
         color: ["#000000", "#FFFFFF"],
       },
       {
-        title: "Node.js",
-        hash: "#Node.js",
-        icon: nodejsicon,
-        color: "#339933",
-      },
-      {
         title: "Tailwind",
         hash: "#Tailwind",
         icon: tailwindcssicon,
@@ -396,6 +395,12 @@ export const skillsDataWeb = [
         hash: "#MongoDB",
         icon: mongodbicon,
         color: "#449C45",
+      },
+      {
+        title: "Angular",
+        hash: "#Angular",
+        icon: angularicon,
+        color: "#d61313",
       },
       {
         title: "Vue.js",
@@ -423,14 +428,25 @@ export const skillsDataBackend = [
   {
     skillsTitle: "BackEnd",
     skills: [
-      { title: "Java", hash: "#Java", icon: javaicon, color: "#F24E1E" },
-      {
-        title: "Spring Boot",
-        hash: "#Spring Boot",
-        icon: adobexdicon,
-        color: "#FF61F6",
-      },
-      { title: "Canva", hash: "#Canva", icon: canvaicon, color: "#00C4CC" },
+      { title: "Java", hash: "#Java", icon: javaicon, color: "#1665C0" },
+      { title: "Spring Boot", hash: "#Spring Boot", icon: springBootIcon, color: "#8BC34B" }, 
+      { title: "Python", hash: "#Python", icon: pythonIcon, color: "#0277BD" }, 
+      { title: "Node.js", hash: "#Node.js", icon: nodejsicon, color: "#339933"},
+    ],
+  },
+] as const;
+
+export const skillsTools = [
+  {
+    skillsTitle: "Tools",
+    skills: [
+      { title: "Terraform", hash: "#Terraform", icon: teraformicon, color: "#611ef2" },
+      { title: "Jenkins", hash: "#Jenkins", icon: jenkinsicon, color: "#251a32"},
+      { title: "AWS", hash: "#AWS", icon: awsicon, color: "#FF9900" },
+      { title: "Docker", hash: "#Docker", icon: dockericon, color: "#2187f4" },
+      { title: "Kubernetes", hash: "#Kubernetes", icon: kubernetesIcon, color: "#0277BD" },
+      { title: "Redis", hash: "#Redis", icon: redisIcon, color: "#E53835"}
+
     ],
   },
 ] as const;
