@@ -23,6 +23,7 @@ const Contact: React.FC = () => {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [error, setError] = useState<string | unknown>(null);
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -31,6 +32,10 @@ const Contact: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsCheckboxChecked(event.target.checked);
+  };
 
   const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
     setError(null);
@@ -285,6 +290,7 @@ const Contact: React.FC = () => {
                   required
                   name="checkbox-label"
                   id="checkbox-label"
+                  onChange={handleCheckboxChange}
                 />
                 <span className="checkbox"></span>
               </label>
@@ -306,10 +312,15 @@ const Contact: React.FC = () => {
                   : `${contactData.button.value.en}`
               }
               iconSVG={contactData.icon}
-              buttoncolor={contactData.colors.main}
+              buttoncolor={isCheckboxChecked ? contactData.colors.main : 'gray'}
               iconcolor={contactData.colors.icon}
               type="submit"
               elementType="input"
+              disabled={!isCheckboxChecked}
+              // Add a className based on isCheckboxChecked for further styling if needed
+              className={`${
+                isCheckboxChecked ? 'enabled-button-class' : 'disabled-button-class'
+              }`}
             />
             <ToastContainer
               className="w-max text-3xl block p-3 max-lg:w-full "
