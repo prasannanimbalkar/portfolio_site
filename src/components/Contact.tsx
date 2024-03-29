@@ -140,56 +140,24 @@ const Contact: React.FC = () => {
   }, []);
 
   const codeSnippet = `
-import  { useState } from "react";
+    import  { useState } from "react";
 
-// 🌈 Spreading Stardust: 
-// Crafting Cosmic Email 🌌
+    // 🌟 Tech Odyssey:
+    // Exploring Digital Frontiers 🚀
 
-const [sender, setSender] = "${name}${
-    lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
-  }🚀";
-const [recipient, setRecipient] = "${email}${
-    lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
-  }📧";
-const [subject, setSubject] = \n"${subject}${
-    lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
-  }✨";
-const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋\n
-Across the cosmos, a message for you:\n
-"${wordWrap(message, 40, " ")}${
-    lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
-  }"\n
-Wishing you stardust dreams,\n
-${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
-\``;
-
-  //   const codeSnippet2 = `
-  // // 🚀 Initiating Quantum Email Transmission 🪐
-  // const launchEmail = async () => {
-  //   try {
-  //     const response = await fetch('https://alpaycelik.dev/send',{
-  //     method: 'POST',
-  //     headers: {'Content-Type': 'application/json'},
-  //     body: JSON.stringify({
-  //      sender,
-  //      recipient,
-  //      subject,
-  //      message
-  //     })
-  //    });
-
-  //    if (response.ok) {
-  //    console.log('🌌 Transmission successful!');
-  //    } else {
-  //    console.error('🌠 Cosmic glitch encountered...');
-  //    }
-  //   } catch (error) {
-  //   console.error('🌪 Quantum disturbance detected:', error);
-  //   }
-  // };
-  // // 🚀 Ready for Liftoff? 🛸
-  // launchEmail();`;
+    const [sender, setSender] = "${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}";
+    const [recipient, setRecipient] = "${email}${lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""}";
+    const [subject, setSubject] = \n"${subject}${lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""}✨";
+    const [message, setMessage] = 
+    \`Hello there! 👋\n
+    We're embarking on an epic tech adventure.\n
+    Let's innovate together.\n
+    "${wordWrap(message, 40, " ")}${
+        lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
+      }"\n
+    Embrace the future!\n
+    ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
+    \``;
 
   return (
     <React.Fragment>

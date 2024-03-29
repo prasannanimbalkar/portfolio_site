@@ -430,7 +430,7 @@ export const skillsDataBackend = [
       { title: "Java", hash: "#Java", icon: javaicon, color: "#1665C0" },
       { title: "Spring Boot", hash: "#Spring Boot", icon: springBootIcon, color: "#8BC34B" }, 
       { title: "Python", hash: "#Python", icon: pythonIcon, color: "#0277BD" }, 
-      { title: "Node.js", hash: "#Node.js", icon: nodejsicon, color: "#339933"},
+      { title: "Node.js", hash: "#Node.js", icon: nodejsicon, color: "#83CD29"},
     ],
   },
 ] as const;
