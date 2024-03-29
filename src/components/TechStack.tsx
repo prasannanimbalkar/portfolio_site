@@ -5,6 +5,7 @@ import {
   skillsDataBackend,
   skillsDataWeb,
   skillsTools,
+  skillsObservability,
 } from "../assets/lib/data";
 import { useTheme } from "../context/theme-context";
 import { useLanguage } from "../context/language-context";
@@ -58,8 +59,9 @@ const TechStack: React.FC = () => {
           </motion.div>
         </div>
         <div className="flex gap-40 justify-center max-lg:flex-col">
-          <div className="w-1/3 max-lg:w-full">
+          <div className="w-1/3 max-lg:w-full flex flex-col gap-20">
             <SkillSection skillsData={skillsDataWeb} theme={theme} />
+            <SkillSection skillsData={skillsObservability} theme={theme} />
           </div>
           <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
             <SkillSection skillsData={skillsDataBackend} theme={theme} />

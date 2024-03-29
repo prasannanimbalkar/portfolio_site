@@ -33,6 +33,8 @@ import dockericon from "../../assets/icons/icons8-docker.svg";
 import kubernetesIcon from "../../assets/icons/icons8-kuber-77.svg";
 import redisIcon from "../../assets/icons/icons8-redis.svg";
 import pythonIcon from "../../assets/icons/icons8-python-77.svg";
+import prometheusIcon from "../../assets/icons/icons8-prometheus.svg";
+import grafanaIcon from "../../assets/icons/icons8-grafana.svg";
 
 
 import tastyMockup from "../../assets/img/tasty.png";
@@ -446,6 +448,16 @@ export const skillsTools = [
       { title: "Kubernetes", hash: "#Kubernetes", icon: kubernetesIcon, color: "#0277BD" },
       { title: "Redis", hash: "#Redis", icon: redisIcon, color: "#E53835"}
 
+    ],
+  },
+] as const;
+
+export const skillsObservability = [
+  {
+    skillsTitle: "Observability",
+    skills: [
+      { title: "Prometheus", hash: "#Prometheus", icon: prometheusIcon, color: "#DE4B1B" },
+      { title: "Grafana", hash: "#Grafana", icon: grafanaIcon, color: "#ED8902"},
     ],
   },
 ] as const;
