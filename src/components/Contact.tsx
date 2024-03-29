@@ -11,8 +11,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
-
+  const apiBaseUrl = import.meta.env.API_BASE_URL || "https://portfolio-mail-8ikm.onrender.com/sendMessage";
+  const formRef = useRef(null);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
@@ -37,26 +37,46 @@ const Contact: React.FC = () => {
     console.log(error);
 
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    // const data = new FormData(e.currentTarget);
+    
+    // Assuming the formRef is attached to the form element
+    const form = formRef.current;
 
-    try {
-      const response = await axios.post(apiBaseUrl, data);
-      console.log(response);
-      if (language === "DE") {
-        toast.success(toastMessages.successEmailSent.de);
-      } else {
-        toast.success(toastMessages.successEmailSent.en);
+    if (form) {
+      // Use type assertion to ensure TypeScript understands the type of form fields
+      const formData = {
+        name: (form['name'] as HTMLInputElement).value,
+        email: (form['email'] as HTMLInputElement).value,
+        subject: (form['subject'] as HTMLInputElement).value,
+        message: (form['message'] as HTMLTextAreaElement).value,
+      };
+
+      const loadingToast = toast.loading('Sending email...');
+
+      try {
+        await axios.post(apiBaseUrl, formData);
+
+        toast.dismiss(loadingToast);
+
+        if (language === "DE") {
+          toast.success(toastMessages.successEmailSent.de);
+        } else {
+          toast.success(toastMessages.successEmailSent.en);
+        }
+      } catch (error) {
+        console.error(error);
+        if (language === "DE") {
+          toast.error(toastMessages.failedEmailSent.de);
+        } else {
+          toast.error(toastMessages.failedEmailSent.en);
+        }
+        setError("An Error occurred, try again later");
       }
-    } catch (error) {
-      console.log(error);
-      if (language === "DE") {
-        toast.error(toastMessages.failedEmailSent.de);
-      } else {
-        toast.error(toastMessages.failedEmailSent.en);
-      }
-      setError("An Error occured, try again later");
+    } else {
+      console.error('Form is null');
+      setError("Form is not available");
     }
-  };
+  }
 
   const handleInputFocus = (fieldName: string) => {
     setCursor(`${fieldName}${cursor}`);
@@ -223,6 +243,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
             </Highlight>
           </div>
           <form
+            ref={formRef}
             className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"
             onSubmit={notifySentForm}
             autoComplete="off"
