@@ -25,6 +25,7 @@ import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 import javaicon from "../../assets/icons/icons8-java-77.svg"
 import awsicon from "../../assets/icons/icons8-amazon-web-services-77.svg";
+import awsiconwhite from "../../assets/icons/icons8-aws-white.svg";
 import teraformicon from "../../assets/icons/icons8-terraform.svg";
 import jenkinsicon from "../../assets/icons/icons8-jenkins.svg";
 import angularicon from "../../assets/icons/icons8-angular.svg";
@@ -443,7 +444,7 @@ export const skillsTools = [
     skills: [
       { title: "Terraform", hash: "#Terraform", icon: teraformicon, color: "#611ef2" },
       { title: "Jenkins", hash: "#Jenkins", icon: jenkinsicon, color: "#251a32"},
-      { title: "AWS", hash: "#AWS", icon: awsicon, color: "#FF9900" },
+      { title: "AWS", hash: "#AWS", icon: [awsicon, awsiconwhite], color: ["#FF9900","#FF9900"] },
       { title: "Docker", hash: "#Docker", icon: dockericon, color: "#2187f4" },
       { title: "Kubernetes", hash: "#Kubernetes", icon: kubernetesIcon, color: "#0277BD" },
       { title: "Redis", hash: "#Redis", icon: redisIcon, color: "#E53835"}
